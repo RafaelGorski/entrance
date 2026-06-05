@@ -1,7 +1,7 @@
 :set -XOverloadedStrings
 import Sound.Tidal.Context
 
-let tidal = startTidal (superdirtTarget {oAddress = "127.0.0.1", oPort = 57120, oLatency = 0.1}) (defaultConfig {cFrameTimespan = 1 / 20})
+tidal <- startTidal (superdirtTarget {oAddress = "127.0.0.1", oPort = 57120, oLatency = 0.1}) (defaultConfig {cFrameTimespan = 1 / 20})
 
 let d1 = streamReplace tidal 1
 let d2 = streamReplace tidal 2

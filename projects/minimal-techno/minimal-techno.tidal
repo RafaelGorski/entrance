@@ -1,0 +1,46 @@
+-- Ambient Minimal Techno
+-- A hypnotic, sparse pattern blending ambient textures with minimal techno rhythm.
+
+setcps (120/60/4)
+
+-- Four-on-the-floor kick with heavy reverb
+:{
+d1
+  $ s "bd*4"
+  # room 0.6
+  # size 0.8
+  # gain 0.85
+:}
+
+-- Offbeat hi-hats with subtle panning drift
+:{
+d2
+  $ s "~ hh ~ hh"
+  # pan (range 0.3 0.7 $ slow 8 sine)
+  # gain 0.55
+  # room 0.4
+:}
+
+-- Sparse clap on beat 2 and 4 with long tail
+:{
+d3
+  $ s "~ cp ~ cp"
+  # room 0.85
+  # size 0.9
+  # gain 0.6
+:}
+
+-- Slow evolving pad — ambient texture
+:{
+d4
+  $ slow 8
+  $ n "0 3 5 7"
+  # s "supersaw"
+  # legato 2
+  # cut 1
+  # lpf (range 400 3000 $ slow 16 sine)
+  # resonance 0.2
+  # room 0.95
+  # size 0.98
+  # gain 0.45
+:}
