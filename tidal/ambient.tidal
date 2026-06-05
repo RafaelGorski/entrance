@@ -1,0 +1,18 @@
+setcps 0.25
+
+d1
+  $ slow 2
+  $ s "bd*2 ~ [cp ~]"
+  # room 0.9
+  # size 0.95
+  # gain 0.7
+
+d2
+  $ slow 8
+  $ n "0 2 4 7"
+  # s "supersaw"
+  # legato 1.5
+  # cut 1
+  # room 0.95
+  # size 0.98
+  # gain 0.5
